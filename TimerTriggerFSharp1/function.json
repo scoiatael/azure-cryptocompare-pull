@@ -1,0 +1,20 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 */5 * * * *"
+    },
+    {
+      "connection": "Crypto_COSMOSDB",
+      "name": "cryptoCompareDocument",
+      "type": "documentDB",
+      "databaseName": "CryptoCurrencies",
+      "collectionName": "cryptocompare",
+      "createIfNotExists": true,
+      "direction": "out"
+    }
+  ]
+}
